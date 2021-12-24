@@ -70,12 +70,6 @@ function App() {
         e.preventDefault();
         console.log(data)
         alert("sucessfully sent")
-        // emailjs.sendForm('service_mbyfgoo', 'template_6eo180o', data.message, 'user_w9vFYqDwIfRUN4atsukOV')
-        //     .then((result) => {
-        //         console.log(result.text);
-        //     }, (error) => {
-        //         console.log(error.text);
-        //     });
     }
     return (
         <div className="App">
