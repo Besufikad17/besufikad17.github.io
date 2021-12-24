@@ -3,6 +3,15 @@
   height: auto;
 }
 
+.Header{
+  width: auto;
+  height: 400px;
+  marigin: 10px;
+  padding: 10px;
+  textAlign: left;
+  background: rgb(2,0,36);
+  background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(140,119,70,1) 0%, rgba(150,150,138,1) 100%);
+}
 .avatar {
   vertical-align: middle;
   width: 100px;

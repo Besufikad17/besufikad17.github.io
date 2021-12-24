@@ -3,14 +3,13 @@ import i2 from './components/assets/img/logos/Java_96px.png';
 import i3 from './components/assets/img/logos/Nodejs_96px.png';
 import i4 from './components/assets/img/logos/Adobe Illustrator_96px.png';
 import i5 from './components/assets/img/logos/icons8-react-96.png';
-import i6
-    from './components/assets/img/logos/icons8-mongodb-a-cross-platform-document-oriented-database-program-96.png';
+import i6 from './components/assets/img/logos/mongo.png';
 import './components/assets/css/style.css';
 import Avatar from 'react-avatar';
 import Footer from "./components/Footer";
 import Card from "./components/Card";
 import React, {useState} from "react";
-import emailjs from 'emailjs-com';
+
 
 function App() {
     const p = [{
@@ -71,25 +70,17 @@ function App() {
         e.preventDefault();
         console.log(data)
         alert("sucessfully sent")
-        emailjs.sendForm('service_mbyfgoo', 'template_6eo180o', data.message, 'user_w9vFYqDwIfRUN4atsukOV')
-            .then((result) => {
-                console.log(result.text);
-            }, (error) => {
-                console.log(error.text);
-            });
+        // emailjs.sendForm('service_mbyfgoo', 'template_6eo180o', data.message, 'user_w9vFYqDwIfRUN4atsukOV')
+        //     .then((result) => {
+        //         console.log(result.text);
+        //     }, (error) => {
+        //         console.log(error.text);
+        //     });
     }
     return (
         <div className="App">
 
-            <div style={{
-                width: "auto",
-                height: "400px",
-                marigin: "10px",
-                padding: "10px",
-                textAlign: "left",
-                background: "rgb(2,0,36)",
-                background: "linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(140,119,70,1) 0%, rgba(150,150,138,1) 100%)"
-            }}>
+            <div className='Header'>
                 <p style={{
                     fontSize: "36px",
                     fontFamily: "consolas",
