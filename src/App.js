@@ -8,8 +8,9 @@ import './components/assets/css/style.css';
 import Avatar from 'react-avatar';
 import Footer from "./components/Footer";
 import Card from "./components/Card";
-import React, {useState} from "react";
+import React, { useState } from "react";
 
+import { Container, Row, Col } from 'reactstrap';
 
 function App() {
     const p = [{
@@ -40,7 +41,7 @@ function App() {
         {
             name: "CalanderFx",
             detail: ["" +
-            "CalanderFx is javaFx app which is based on Ethiopic calander system"],
+                "CalanderFx is javaFx app which is based on Ethiopic calander system"],
             type: 1,
             url: "https://github.com/Besufikad17/CalanderFx"
         }
@@ -63,7 +64,7 @@ function App() {
             type: 0,
         }
     ]
-    const [data, setData] = useState({email: "", name: "", message: ""})
+    const [data, setData] = useState({ email: "", name: "", message: "" })
 
 
     const submit = e => {
@@ -84,14 +85,14 @@ function App() {
                     marginTop: "140px",
                     marginLeft: "100px"
                 }}>Besufikad Micheal</p>
-                <p style={{fontSize: "20px", fontFamily: "consolas", color: "white", marginLeft: "100px"}}>Fullstack
+                <p style={{ fontSize: "20px", fontFamily: "consolas", color: "white", marginLeft: "100px" }}>Fullstack
                     Developer || Illustrator || Student</p>
             </div>
 
             <div className='cards__container'>
                 <div className='cards__wrapper'>
                     <ul className='cards__items'>
-                        <Card name={p[0].name} type={p[0].type} detail={p[0].detail}/>
+                        <Card name={p[0].name} type={p[0].type} detail={p[0].detail} />
                     </ul>
                 </div>
             </div>
@@ -104,19 +105,20 @@ function App() {
                 textAlign: "center",
                 backgroundColor: "#323232"
             }}
-                 id="experience"
+                id="experience"
             >
-                <p style={{fontSize: "46px", fontFamily: "consolas", color: "white"}}>Skills</p>
-                <p style={{fontSize: "26px", fontFamily: "consolas", color: "white"}}>Things
+                <p style={{ fontSize: "46px", fontFamily: "consolas", color: "white" }}>Skills</p>
+
+                <p style={{ fontSize: "26px", fontFamily: "consolas", color: "white" }}>Things
                     I've picked up over the years</p>
 
                 <div className="box">
-                    <Avatar src={i1} alt="python" round={true} size={64}/>
-                    <Avatar src={i2} alt="java" round={true} size={64}/>
-                    <Avatar src={i3} alt="node" round={true} size={64}/>
-                    <Avatar src={i4} alt="illustato" round={true} size={64}/>
-                    <Avatar src={i5} alt="illustato" round={true} size={64}/>
-                    <Avatar src={i6} alt="illustato" round={true} size={64}/>
+                    <Avatar src={i1} alt="python" round={true} size={64} />
+                    <Avatar src={i2} alt="java" round={true} size={64} />
+                    <Avatar src={i3} alt="node" round={true} size={64} />
+                    <Avatar src={i4} alt="illustato" round={true} size={64} />
+                    <Avatar src={i5} alt="illustato" round={true} size={64} />
+                    <Avatar src={i6} alt="illustato" round={true} size={64} />
                 </div>
             </div>
 
@@ -127,21 +129,26 @@ function App() {
                 textAlign: "center",
                 backgroundColor: "white"
             }}
-                 id="experience"
+                id="experience"
             >
-                <p style={{fontSize: "46px", fontFamily: "consolas"}}>Experience</p>
-                <p style={{fontSize: "26px", fontFamily: "consolas"}}>Places and people I've worked with</p>
+                <p style={{ fontSize: "46px", fontFamily: "consolas" }}>Experience</p>
+                <p style={{ fontSize: "26px", fontFamily: "consolas" }}>Places and people I've worked with</p>
             </div>
 
-            <div className='cards__container'>
-                <div className='cards__wrapper'>
-                    <ul className='cards__items'>
-                        <Card name={org[0].name} type={org[0].type} detail={org[0].detail}/>
-                        <Card name={org[1].name} type={org[1].type} detail={org[1].detail}/>
-                        <Card name={org[2].name} type={org[2].type} detail={org[2].detail}/>
-                    </ul>
-                </div>
-            </div>
+            <Container>
+                <Row>
+                    <Col>
+                        <Card name={org[0].name} type={org[0].type} detail={org[0].detail} />
+                    </Col><br />
+                    <Col>
+                        <Card name={org[1].name} type={org[1].type} detail={org[1].detail} />
+                    </Col><br />
+                    <Col>
+
+                        <Card name={org[2].name} type={org[2].type} detail={org[2].detail} />
+                    </Col><br />
+                </Row>
+            </Container>
 
             <div style={{
                 width: "auto",
@@ -150,27 +157,61 @@ function App() {
                 textAlign: "center",
                 backgroundColor: "#16251F"
             }}>
-                <p style={{fontSize: "46px", fontFamily: "consolas", color: "white"}}>Projects</p>
-                <p style={{fontSize: "26px", fontFamily: "consolas", color: "white"}}>List
+                <p style={{ fontSize: "46px", fontFamily: "consolas", color: "white" }}>Projects</p>
+                <p style={{ fontSize: "26px", fontFamily: "consolas", color: "white" }}>List
                     of open-source projects I have been working on</p>
             </div>
 
-            <div id="projects">
-                <div className='cards__container'>
-                    <div className='cards__wrapper'>
-                        <ul className='cards__items'>
-                            <Card name={projects[0].name} type={projects[0].type} url={projects[0].url}
-                                  detail={projects[0].detail}/>
-                            <Card name={projects[1].name} type={projects[1].type} url={projects[1].url}
-                                  detail={projects[1].detail}/>
-                            <Card name={projects[2].name} type={projects[2].type} url={projects[2].url}
-                                  detail={projects[2].detail}/>
-                            <Card name={projects[3].name} type={projects[3].type} url={projects[3].url}
-                                  detail={projects[3].detail}/>
-                        </ul>
-                    </div>
-                </div>
-            </div>
+
+            <Container>
+                <Row>
+                    <Col
+                        className="bg-light border"
+                        sm={{
+                            offset: 1,
+                            size: 'auto'
+                        }}
+                    >
+                        <Card name={projects[0].name} type={projects[0].type} url={projects[0].url}
+                            detail={projects[0].detail} />
+                    </Col><br />
+                    <Col
+                        className="bg-light border"
+                        sm={{
+                            offset: 1,
+                            size: 'auto'
+                        }}
+                    >
+                        <Card name={projects[1].name} type={projects[1].type} url={projects[1].url}
+                            detail={projects[1].detail} />
+                    </Col><br />
+                </Row>
+                <Row>
+                    <Col
+                        className="bg-light border"
+                        sm={{
+                            offset: 1,
+                            size: 'auto'
+                        }}
+                    >
+                        <Card name={projects[2].name} type={projects[2].type} url={projects[2].url}
+                            detail={projects[2].detail} />
+                    </Col><br />
+
+                    <Col
+                        className="bg-light border"
+                        sm={{
+                            offset: 1,
+                            size: 'auto'
+                        }}
+                    >
+                        <Card name={projects[3].name} type={projects[3].type} url={projects[3].url}
+                            detail={projects[3].detail} />
+                    </Col><br />
+
+                </Row>
+            </Container>
+
 
             <div style={{
                 width: "auto",
@@ -179,8 +220,8 @@ function App() {
                 textAlign: "center",
                 backgroundColor: "#AAB9B7"
             }}>
-                <p style={{fontSize: "46px", fontFamily: "consolas", color: "white"}}>Let's grab a cup!</p>
-                <p style={{fontSize: "26px", fontFamily: "consolas", color: "white"}}>Available to chat about design,
+                <p style={{ fontSize: "46px", fontFamily: "consolas", color: "white" }}>Let's grab a cup!</p>
+                <p style={{ fontSize: "26px", fontFamily: "consolas", color: "white" }}>Available to chat about design,
                     people, and things.</p>
             </div>
             <div className="container">
@@ -188,15 +229,15 @@ function App() {
                     <div className="form">
                         <div className="form-group">
                             <input type="text" value={data.subject}
-                                   onChange={e => setData({...data, name: e.target.value})} placeholder="name"/>
+                                onChange={e => setData({ ...data, name: e.target.value })} placeholder="name" />
                         </div>
                         <div className="form-group">
                             <input type="text" value={data.email}
-                                   onChange={e => setData({...data, email: e.target.value})} placeholder="email"/>
+                                onChange={e => setData({ ...data, email: e.target.value })} placeholder="email" />
                         </div>
                         <div className="form-group">
-                            <textarea value={data.message} onChange={e => setData({...data, message: e.target.value})}
-                                      placeholder="message"/>
+                            <textarea value={data.message} onChange={e => setData({ ...data, message: e.target.value })}
+                                placeholder="message" />
                         </div>
                     </div>
                 </div>
@@ -207,7 +248,7 @@ function App() {
                 </div>
             </div>
 
-            <Footer/>
+            <Footer />
         </div>
     );
 }
