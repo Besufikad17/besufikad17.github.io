@@ -218,7 +218,7 @@ function App() {
                 marigin: "20px",
                 padding: "50px",
                 textAlign: "center",
-                backgroundColor: "#AAB9B7"
+                backgroundColor: "#2e2e2e"
             }}>
                 <p style={{ fontSize: "46px", fontFamily: "consolas", color: "white" }}>Let's grab a cup!</p>
                 <p style={{ fontSize: "26px", fontFamily: "consolas", color: "white" }}>Available to chat about design,
