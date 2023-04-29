@@ -1,33 +1,58 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+// custom components
+import Skills from "./components/Skills";
+import Experience from "./components/Experience";
+
+// assets
+import pfp from "./assets/images/photo_2022-06-05_10-38-57.jpg";
+import './App.css';
+
+
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
     <>
       <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+
+          {/* Header */}
+          <div className="title-container">
+            <p className="name">
+                Besufikad Micheal
+            </p>
+            <p className="title">
+                Fullstack developer || Student
+            </p>
+          </div>
+
+          {/* Introduction */}
+          <div className="intro-container">
+            <div className="intro-row">
+                <img src={pfp} alt="profile" />
+                <div className="intro-card">
+                  <p>
+                      Hi there! I'm a fullstack developer and software engineering student based in Ethiopia.
+                      I started programming in high school and developed my skills through project based learning techniques.
+                      Currently I am working on open-source projects and avaliable for job.
+                  </p>
+                </div>
+            </div>
+          </div>
+
+          {/* Skills */}
+          <div className="skills-container">
+            <p className="skill">Skills</p>
+            <p className="skill-title">Things I've picked up over the years</p>
+            <Skills/>
+          </div>
+
+          {/* Experience */}
+          <div className="experience-container">
+            <p className="xp">Experience</p>
+            <p className="xp-title">Places and people I've worked with</p>
+            <Experience/>
+          </div>
+
+        </div>  
     </>
   )
 }
