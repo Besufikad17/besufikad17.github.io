@@ -14,6 +14,7 @@
   "homepage": "https://besufikad17.github.io",
   "dependencies": {
     "@types/yup": "^0.32.0",
+    "emailjs-com": "^3.2.0",
     "formik": "^2.2.9",
     "gh-pages": "^5.0.0",
     "react": "^18.2.0",
