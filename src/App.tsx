@@ -1,11 +1,13 @@
 // custom components
 import Skills from "./components/Skills";
 import Experience from "./components/Experience";
+import Projects from "./components/Projects";
+import ContactForm from "./components/ContactForm";
 
 // assets
 import pfp from "./assets/images/photo_2022-06-05_10-38-57.jpg";
 import './App.css';
-
+import Footer from "./components/Footer";
 
 
 function App() {
@@ -51,6 +53,24 @@ function App() {
             <p className="xp-title">Places and people I've worked with</p>
             <Experience/>
           </div>
+
+          {/* Projects */}
+          <div className="projects-container">
+            <p className="skill">Projects</p>
+            <p className="skill-title">List of open-source projects I have been working on</p>
+            <Projects/>
+          </div>
+
+          {/* Contact */}
+          <div className="contact-container">
+            <p className="xp">Let's grab a cup!</p>
+            <p className="xp-title">Available to chat about design,
+                people, and things.</p>
+            <ContactForm/>
+          </div>
+
+          {/* Footer */}
+          <Footer/>
 
         </div>  
     </>
