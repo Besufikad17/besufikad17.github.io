@@ -28,9 +28,9 @@ export default function Projects() {
 
   return (
     <div className="row2">
-      {projects.map(project => {
+      {projects.map((project, i) => {
         return(
-            <div className="card">
+            <div className="card" key={i}>
                 <b>{project[0]}</b>
                 <p>{project[1]}</p>
             </div>

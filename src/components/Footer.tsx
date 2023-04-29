@@ -24,9 +24,9 @@ export default function Footer() {
       </div>
       <div className="right-side">
         <div className="icons-row">
-         {socials.map(social => {
+         {socials.map((social, i) => {
             return(
-              <a href={social[1]}>
+              <a href={social[1]} key={i}>
                 <img
                   src={social[0]}
                   alt=""

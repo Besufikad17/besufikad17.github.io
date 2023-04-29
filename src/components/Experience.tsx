@@ -26,9 +26,9 @@ export default function Experience() {
   ];
   return (
     <div className="row2">
-      {xps.map((xp) => {
+      {xps.map((xp, i) => {
         return (
-          <div className="card">
+          <div className="card" key={i}>
             <b>{xp[0]}</b>
             <p>{xp[1]}</p>
             <p>

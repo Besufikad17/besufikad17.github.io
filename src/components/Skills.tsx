@@ -33,9 +33,9 @@ export default function Skills() {
 
   return (
     <div className="row">
-      {skills.map((skill) => {
+      {skills.map((skill, i) => {
         return (
-          <div className="icon">
+          <div className="icon" key={i}>
             <img
               src={skill[0]}
               alt={skill[1]}
