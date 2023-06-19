@@ -3,6 +3,7 @@ import Skills from "./components/Skills";
 import Experience from "./components/Experience";
 import Projects from "./components/Projects";
 import ContactForm from "./components/ContactForm";
+import { Helmet } from "react-helmet";
 
 // assets
 import pfp from "./assets/images/photo_2022-06-05_10-38-57.jpg";
@@ -11,10 +12,18 @@ import Footer from "./components/Footer";
 
 
 function App() {
-
+  
   return (
     <>
       <div>
+          
+          <Helmet>
+            <script 
+              src="https://trantor.frectonz.tech/launch-control.js" 
+              data-id="trantor" 
+              data-tracking-id="01H2WBWDTT6PHXVEJRX5ANM8FQ">
+            </script>
+          </Helmet>
 
           {/* Header */}
           <div className="title-container">
