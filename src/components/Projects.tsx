@@ -24,6 +24,14 @@ export default function Projects() {
       <a href="https://github.com/Besufikad17/Automata">Automata</a>,
       " A simple python script to download basic templates for web developers.",
     ],
+    [
+      <a href="https://github.com/Besufikad17/waliyalift">waliyalift</a>,
+      " Simple Ride hailing app made by using flutter."
+    ],
+    [
+      <a href="https://github.com/Besufikad17/pick_and_drop">pick_and_drop</a>,
+      " Simple android app for selecting pick and drop information of a logistic item."
+    ]
   ];
 
   return (

@@ -1,10 +1,11 @@
 export default function Experience() {
+  
   const xps = [
     [
-      "Github",
-      "Contributed in open-source projects",
-      "Co-developed",
-      <a href="https://github.com/Besufikad17/Abushakir">Abushakir-java</a>,
+      "Zerone Technologies",
+      "Software Devlopment Intern",
+      "Developed",
+      <a href="https://github.com/Besufikad17/waliyalift">waliyalift</a> 
     ],
     [
       "Chewatacon",

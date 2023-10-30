@@ -3,6 +3,7 @@ import Skills from "./components/Skills";
 import Experience from "./components/Experience";
 import Projects from "./components/Projects";
 import ContactForm from "./components/ContactForm";
+import { useEffect } from "react";
 import { Helmet } from "react-helmet";
 
 // assets
@@ -10,9 +11,12 @@ import pfp from "./assets/images/photo_2022-06-05_10-38-57.jpg";
 import './App.css';
 import Footer from "./components/Footer";
 
-
 function App() {
   
+  useEffect(() => {
+      document.title = 'Besufikad Micheal';
+  }, []);
+
   return (
     <>
       <div>
