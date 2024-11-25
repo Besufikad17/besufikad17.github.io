@@ -1,8 +1,8 @@
 import { useEffect, useRef, useState } from "react";
-import type { LayoutProps } from "../../types/component";
 import { LINKS, RESUME_LINK } from "../../utils/constants/strings";
+import type { LayoutProps } from "../../types/component";
 import Drawer from "../headless/Drawer";
-// import Footer from "./Footer";
+import Footer from "./Footer";
 import Header from "./Header";
 
 
@@ -47,10 +47,10 @@ export default function DefaultLayout({ children } :LayoutProps) {
                     </div>
                 </Drawer>
             )}
-            <div className="flex flex-col items-center">
+            <div className="flex flex-col items-center min-h-screen gap-16">
                 <Header toggleDrawer={toggleDrawer} />
                 {children}
-                {/* <Footer /> */}
+                <Footer />
                 <div className="fixed px-3 py-2 text-sm font-bold text-white bg-gray-900 rounded bottom-4 left-4 z-50">
                     <span className="inline-block 5xs:hidden">DEFAULT</span>
                     <span className="hidden 5xs:inline-block 4xs:hidden">5XS</span>

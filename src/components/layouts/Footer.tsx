@@ -1,42 +1,12 @@
-import twitterIcon from "../../assets/images/twitter.svg";
-import telegramIcon from "../../assets/images/baseline-telegram.svg";
-import githubIcon from "../../assets/images/github (1).svg";
-import linkedIcon from "../../assets/images/linkedin.svg";
+import { Icon } from "@iconify/react";
+import { SOCIAL_LINKS } from "../../utils/constants/strings";
 
 export default function Footer() {
-
-  const socials = [
-    [twitterIcon, "https://twitter.com/besumicheal"],
-    [telegramIcon, "https://t.me/Itachiinthesky"],
-    [githubIcon, "https://github.com/Besufikad17"],
-    [linkedIcon, "https://www.linkedin.com/in/besufikad-tilahun-6592281b4"]
-  ];
-
   return (
-    <div className="footer-container">
-      <div className="left-side">
-        <p>@2023 Besufikad Micheal</p>
-      </div>
-      <div className="center">
-        <p>besumicheal@gmail.com</p>
-        <p>0973132132</p>
-        <p>Addis Ababa, Ethiopia</p>
-      </div>
-      <div className="right-side">
-        <div className="icons-row">
-         {socials.map((social, i) => {
-            return(
-              <a href={social[1]} key={i}>
-                <img
-                  src={social[0]}
-                  alt=""
-                  width="20px"
-                  height="20px"
-                />
-              </a>
-            )
-         })}
-        </div>
+    <div className="flex items-center justify-center w-full">
+      <div className="flex items-center gap-6 text-2xl text-primary-950 dark:text-secondary-200">
+        { SOCIAL_LINKS.map((social, index) =>  <a href={social.url} target="_blank" className="hover:text-blue-300">
+            <Icon icon={social.icon} key={index} /></a>) }
       </div>
     </div>
   );

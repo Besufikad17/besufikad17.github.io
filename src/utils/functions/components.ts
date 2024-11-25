@@ -1,5 +1,3 @@
-import { useState, useRef, useEffect } from "react";
-
 export function getDrawerDirection(direction: string, isClosed: boolean): string {
     if(direction === 'left') {
         if(isClosed) {
