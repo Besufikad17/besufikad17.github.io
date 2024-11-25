@@ -1,7 +1,7 @@
-import twitterIcon from "../assets/images/twitter.svg";
-import telegramIcon from "../assets/images/baseline-telegram.svg";
-import githubIcon from "../assets/images/github (1).svg";
-import linkedIcon from "../assets/images/linkedin.svg";
+import twitterIcon from "../../assets/images/twitter.svg";
+import telegramIcon from "../../assets/images/baseline-telegram.svg";
+import githubIcon from "../../assets/images/github (1).svg";
+import linkedIcon from "../../assets/images/linkedin.svg";
 
 export default function Footer() {
 
