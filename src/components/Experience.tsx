@@ -11,9 +11,11 @@ export default function Experience() {
                 <span className="font-bold">{exp.role}</span>
                 <span className="text-sm italic">{exp.company}</span>   
               </div>
-              <span className="text-sm">{exp.duration}</span>
+              <span>{exp.duration}</span>
             </div>
-            <p>{exp.description}</p>
+            <ul className="flex flex-col gap-4 p-4 list-disc">
+              {exp.description.map((points, index) => <li key={index}>{points}</li>)}
+            </ul>
           </div>
         );
       })}

@@ -48,7 +48,7 @@ export default function DefaultLayout(props: LayoutProps) {
                     </div>
                 </Drawer>
             )}
-            <div className="flex flex-col items-center min-h-screen gap-12">
+            <div className="flex flex-col items-center min-h-screen gap-8">
                 <Header setSection={setSection} toggleDrawer={toggleDrawer} />
                 {children}
                 { section === "about" && (
