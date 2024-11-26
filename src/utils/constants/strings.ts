@@ -1,3 +1,24 @@
+export const EXPERIENCE = [
+    {
+        role: "Front-End Developer",
+        company: "Minab IT Solutions PLC",
+        duration: "Jul 2024 - Present",
+        description: "Developed responsive web applications with Nuxt.js, integrating complex UI designs, dynamic map features using Leaflet, and secure GraphQL API connections. Built reusable, type-safe UI components with Tailwind CSS, designed a database monitoring tool using Golang and PostgreSQL, and maintained robust test suites with Historie and Jest for quality assurance."
+    },
+    {
+        role: "Back-End Developer",
+        company: "Micro Sun & Solutions PLC",
+        duration: "Feb 2024 - Jul 2024",
+        description: "Designed and implemented RESTful APIs for a language learning application, enhancing its functionality and user experience. Additionally, I integrated notification services using Redis and BullMQ, and incorporated payment gateways such as Chapa and Telebirr to facilitate seamless transactions. Currently, I maintain and develop new features for the backend of a recipe application, ensuring its continual improvement and reliability."
+    },
+    {
+        role: "Mobile App Developer",
+        company: "Private Client",
+        duration: "Nov 2023 - Feb 2024",
+        description: "developed high-performance Android apps with Flutter and Dart, integrating secure REST APIs and applying clean architecture principles for scalable, maintainable code. I also streamlined workflows with CI/CD pipelines and deployed apps to the Google Play Store."
+    }
+];
+
 export const LINKS = [
     {
         name: "skills",
@@ -100,6 +121,6 @@ export const SOCIAL_LINKS = [
     },
     {
         icon: "simple-icons:linkedin",
-        url: "https://www.linkedin.com/in/besufikad-tilahun-6592281b4"
+        url: "https://www.linkedin.com/in/besufikad-micheal-6592281b4"
     }
 ];

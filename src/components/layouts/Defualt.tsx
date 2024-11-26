@@ -5,8 +5,9 @@ import Drawer from "../headless/Drawer";
 import Footer from "./Footer";
 import Header from "./Header";
 
+export default function DefaultLayout(props: LayoutProps) {
+    const { children, section, setSection } = props;
 
-export default function DefaultLayout({ children } :LayoutProps) {
     const [drawerOpen, setDrawerOpen] = useState(false);
     const ref = useRef<HTMLDivElement | null>(null);
 
@@ -28,29 +29,31 @@ export default function DefaultLayout({ children } :LayoutProps) {
     }, []);
 
     return (
-        <div className="flex flex-col bg-secondary-200 dark:bg-primary-950 w-full min-h-screen">
+        <div className="flex flex-col bg-secondary-200 dark:bg-primary-950 w-full min-h-[calc(100vh-120px)] scroll-smooth">
             { drawerOpen && (
                 <Drawer ref={ref} autoClose={true} direction="right" isClosed={!drawerOpen} toggleDrawer={toggleDrawer} wrapperClassName="w-full sm:w-1/2 bg-secondary-200 dark:bg-primary-950">
                     <div className="flex flex-col gap-6 mt-10 p-8 text-primary-950 dark:text-secondary-200">
                         {  
                             LINKS.map((link, index) => {
                                 return (
-                                    <a href={link.url} className="hover:border-b hover:border-blue-300 hover:text-blue-300 cursor-pointer" key={index}>
+                                    <span onClick={() => setSection(link.name)} className="hover:border-b hover:border-blue-300 hover:text-blue-300 cursor-pointer w-max" key={index}>
                                         {link.name}
-                                    </a>
+                                    </span>
                                 );
                             }) 
                         }
-                        <a href={RESUME_LINK} target="_blank" className="block rounded-md border-2 border-primary-950 dark:border-secondary-200 hover:border-blue-300 dark:hover:border-blue-300 hover:text-blue-300 cursor-pointer bg-secondary-200 dark:bg-primary-950 px-4 py-1 focus:outline-none focus:ring-0"> 
+                        <a href={RESUME_LINK} target="_blank" className="block rounded-md border-2 border-primary-950 dark:border-secondary-200 hover:border-blue-300 dark:hover:border-blue-300 hover:text-blue-300 cursor-pointer bg-secondary-200 dark:bg-primary-950 px-4 py-1 focus:outline-none focus:ring-0 w-max"> 
                             Resume 
                         </a>
                     </div>
                 </Drawer>
             )}
-            <div className="flex flex-col items-center min-h-screen gap-16">
-                <Header toggleDrawer={toggleDrawer} />
+            <div className="flex flex-col items-center min-h-screen gap-12">
+                <Header setSection={setSection} toggleDrawer={toggleDrawer} />
                 {children}
-                <Footer />
+                { section === "about" && (
+                    <Footer />
+                )}
                 <div className="fixed px-3 py-2 text-sm font-bold text-white bg-gray-900 rounded bottom-4 left-4 z-50">
                     <span className="inline-block 5xs:hidden">DEFAULT</span>
                     <span className="hidden 5xs:inline-block 4xs:hidden">5XS</span>

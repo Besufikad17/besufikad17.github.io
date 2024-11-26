@@ -9,8 +9,11 @@ export type DrawerProps = {
 
 export type HeaderProps = {
     toggleDrawer: () => void;
+    setSection: (section: string) => void;
 }
 
 export type LayoutProps = {
     children: JSX.Element;
+    section: string;
+    setSection: (section: string) => void;
 }

@@ -5,6 +5,8 @@ import { useThemeDetector } from "../../utils/functions/theme";
 import type { HeaderProps } from "../../types/component";
 
 export default function Header(props: HeaderProps) {
+    const { setSection } = props;
+
     const [mode, setMode] = useState(useThemeDetector() ? "dark" : "light");
 
     const toggleMode = () => {
@@ -20,14 +22,14 @@ export default function Header(props: HeaderProps) {
     return (
         <div className="flex items-center justify-center lg:w-2/3 w-full bg-secondary-200 dark:bg-primary-950 sticky">
             <div className="flex items-center justify-between w-full p-8 text-primary-950 dark:text-secondary-200">
-                <h1 className="text-2xl md:text-4xl font-semibold">bm</h1>
+                <span onClick={() => setSection("about")} className="text-2xl md:text-4xl font-semibold cursor-pointer">bm</span>
                 <div className="hidden md:flex items-start gap-8">
                     {  
                         LINKS.map((link, index) => {
                             return (
-                                <a href={link.url} className="hover:border-b hover:border-blue-300 hover:text-blue-300 cursor-pointer" key={index}>
+                                <span onClick={() => setSection(link.name)} className="hover:border-b hover:border-blue-300 hover:text-blue-300 cursor-pointer" key={index}>
                                     {link.name}
-                                </a>
+                                </span>
                             );
                         }) 
                     }

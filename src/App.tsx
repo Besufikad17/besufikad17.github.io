@@ -1,41 +1,48 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import DefaultLayout from "./components/layouts/Defualt";
+import Experience from "./components/Experience";
 import Skills from "./components/Skills";
-import ProfilePicture from "./assets/images/profile-picture.png";
+import ProfilePicture from "./assets/images/profile-picture.jpg";
 import './App.css';
 
 function App() {
+  const[section, setSection] = useState("about");
+  
   useEffect(() => {
       document.title = 'Besufikad Micheal';
   }, []);
 
   return (
-    <DefaultLayout>    
-      <div className="flex flex-col gap-12 p-8 w-full md:w-1/2">
-        <div className="flex flex-col items-center sm:flex-row sm:items-start gap-8">
+    <DefaultLayout section={section} setSection={setSection}>    
+      { section === "about" ? (
+        <div className="flex flex-col justify-center sm:flex-row sm:items-start gap-8 animate-fade-left animate-once animate-duration-[200ms] animate-delay-[10ms] animate-ease-in animate-normal animate-fill-forwards">
           <img src={ProfilePicture} alt="profile" className="size-36 border-2 border-primary-950 dark:border-secondary-200 hover:border-blue-300 rounded-full" />
-          <div className="flex flex-col gap-6 text-primary-950 dark:text-secondary-200">
-            <h1 className="text-3xl font-bold">i'm besufikad micheal</h1>
-            <span>a full-stack developer from Ethiopia</span>
-            <a href="https://wakatime.com/@878e86a6-8cd1-46ca-92a0-8a22ea5e6437">
-              <img src="https://wakatime.com/badge/user/878e86a6-8cd1-46ca-92a0-8a22ea5e6437.svg" alt="Total time coded since Oct 29 2022" />
-            </a>
+          <div className="flex flex-col items-center md:items-start gap-3 text-primary-950 dark:text-secondary-200 w-full md:w-1/2">
+            <div className="flex flex-col items-center md:items-start gap-2">
+              <h1 className="text-3xl font-bold">besufikad micheal</h1>
+              <span className="text-xl">full-stack developer</span>
+            </div>
+            <p>Building high-performance applications with cutting-edge technologies.</p>
           </div>
         </div>
-        <div id="skills" className="flex flex-col items-center gap-8 text-primary-950 dark:text-secondary-200">
+      ) : section === "skills" ? (
+        <div id="skills" className="flex flex-col items-center gap-8 text-primary-950 dark:text-secondary-200  animate-fade-left animate-once animate-duration-[200ms] animate-delay-[10ms] animate-ease-in animate-normal animate-fill-forwards">
           <h1 className="text-3xl">Skills</h1>
           <span>Things I've picked up over the years</span>
           <Skills/>
         </div>
-      </div>
+      ) : section === "experience" ? (
+        <div className="flex flex-col gap-16 w-full md:w-1/2">
+          <div id="experience" className="flex flex-col items-center gap-8 text-primary-950 dark:text-secondary-200  animate-fade-left animate-once animate-duration-[200ms] animate-delay-[10ms] animate-ease-in animate-normal animate-fill-forwards">
+            <h1 className="text-3xl">Experience</h1>
+            <span>Places and people I've worked with</span>
+            <Experience/>
+          </div>
+        </div>
+      ) : (
+        <div/>
+      )}
     </DefaultLayout>
-
-    //       <div className="experience-container">
-    //         <p className="xp">Experience</p>
-    //         <p className="xp-title">Places and people I've worked with</p>
-    //         <Experience/>
-    //       </div>
-
     //       <div className="projects-container">
     //         <p className="skill">Projects</p>
     //         <p className="skill-title">List of open-source projects I have been working on</p>
@@ -48,10 +55,6 @@ function App() {
     //             people, and things.</p>
     //         <ContactForm/>
     //       </div>
-
-    //       <Footer/>
-    //     </div>  
-    // </>
   )
 }
 

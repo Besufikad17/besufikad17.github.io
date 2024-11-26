@@ -1,40 +1,19 @@
+import { EXPERIENCE } from "../utils/constants/strings";
+
 export default function Experience() {
-  
-  const xps = [
-    [
-      "Zerone Technologies",
-      "Software Devlopment Intern",
-      "Developed",
-      <a href="https://github.com/Besufikad17/waliyalift">waliyalift</a> 
-    ],
-    [
-      "Chewatacon",
-      "Participant in 2021 D5 game jam.",
-      "Co-developed",
-      <a href="https://github.com/Besufikad17/DigitalAcheda">digitalAcheda</a>,
-    ],
-    [
-      "Icog-Labs",
-      "Participant in 2019 Solve-IT competition.",
-      "Co-developed ecobox",
-    ],
-    [
-      "Afriopia Hackhton",
-      "Participated in 2023 Afriopia Hackhton",
-      "Co-developed",
-      <a href="https://github.com/Team-Bazooka/TeleQuiz-backend">tele-quiz bot backend</a>,
-    ],
-  ];
   return (
-    <div className="row2">
-      {xps.map((xp, i) => {
+    <div className="flex flex-col gap-4 p-4 w-full">
+      { EXPERIENCE.map((exp, index) => {
         return (
-          <div className="card" key={i}>
-            <b>{xp[0]}</b>
-            <p>{xp[1]}</p>
-            <p>
-              {xp[2]} {xp[3] ? xp[3] : null}
-            </p>
+          <div className="flex flex-col gap-4 border-y-2 py-2 border-primary-950 dark:border-secondary-200 text-primary-950 dark:text-secondary-200" key={index}>
+            <div className="flex items-start justify-between">
+              <div className="flex flex-col gap-2">
+                <span className="font-bold">{exp.role}</span>
+                <span className="text-sm italic">{exp.company}</span>   
+              </div>
+              <span className="text-sm">{exp.duration}</span>
+            </div>
+            <p>{exp.description}</p>
           </div>
         );
       })}
