@@ -53,6 +53,32 @@ export const LINKS = [
     }
 ];
 
+export const PROJECTS = [
+    {
+        "title": "betNaMekina",
+        "description": "A versatile marketplace platform enabling users to seamlessly buy, sell, or rent cars and properties.",
+        "tools": ["Vue.js", "Tailwind CSS"],
+        "link": "https://bet-na-mekina.vercel.app/"
+    },
+    {
+        "title": "minab_events",
+        "description": "An event management system built to streamline the organization, and scheduling of events.",
+        "tools": ["Nuxt.js", "Tailwind CSS", "Go", "Hasura GraphQL"],
+        "link": "https://minab-events.vercel.app/"
+    },
+    {
+        "title": "better-auth-nuxtjs-demo",
+        "description": "Nuxt.js demo to showcase better-auth. features and capabilities.",
+        "tools": ["Nuxt.js", "Tailwind CSS", "BetterAuth"],
+        "link": "https://better-auth-nuxtjs-demo.vercel.app/"
+    },
+    {
+        "title": "finapp",
+        "description": "A mobile application designed to efficiently manage and track various financial assets within a company.",
+        "tools": ["Dart", "Flutter"]
+    },
+];
+
 export const RESUME_LINK = "https://drive.google.com/file/d/1QmP71EhC7Rc8wmGZrOt3XBFqGzY1GWSc/view?usp=sharing";
 
 export const SKILLS = {
@@ -84,8 +110,12 @@ export const SKILLS = {
             icon: "simple-icons:express"
         },
         {
-            name: "Golang",
+            name: "Go",
             icon: "simple-icons:go"
+        },
+        {
+            name: "Hasura GraphQL",
+            icon: "simple-icons:hasura"
         },
         {
             name: "Laravel",

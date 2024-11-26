@@ -3,6 +3,7 @@ import DefaultLayout from "./components/layouts/Defualt";
 import Experience from "./components/Experience";
 import Skills from "./components/Skills";
 import ProfilePicture from "./assets/images/profile-picture.jpg";
+import Projects from "./components/Projects";
 import './App.css';
 
 function App() {
@@ -41,16 +42,18 @@ function App() {
             <Experience/>
           </div>
         </div>
+      ) : section === "projects" ? (
+        <div className="flex flex-col gap-16 w-full md:w-1/2">
+          <div id="experience" className="flex flex-col items-center gap-8 text-primary-950 dark:text-secondary-200  animate-fade-left animate-once animate-duration-[200ms] animate-delay-[10ms] animate-ease-in animate-normal animate-fill-forwards">
+            <h1 className="text-3xl">Projects</h1>
+            <span>List of projects I have been working on</span>
+            <Projects/>
+          </div>
+        </div>
       ) : (
         <div/>
       )}
     </DefaultLayout>
-    //       <div className="projects-container">
-    //         <p className="skill">Projects</p>
-    //         <p className="skill-title">List of open-source projects I have been working on</p>
-    //         <Projects/>
-    //       </div>
-
     //       <div className="contact-container">
     //         <p className="xp">Let's grab a cup!</p>
     //         <p className="xp-title">Available to chat about design,
