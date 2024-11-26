@@ -15,21 +15,23 @@ function App() {
   return (
     <DefaultLayout section={section} setSection={setSection}>    
       { section === "about" ? (
-        <div className="flex flex-col justify-center sm:flex-row sm:items-start gap-8 animate-fade-left animate-once animate-duration-[200ms] animate-delay-[10ms] animate-ease-in animate-normal animate-fill-forwards">
+        <div className="flex flex-col items-center justify-center sm:flex-row sm:items-start gap-8 animate-fade-left animate-once animate-duration-[200ms] animate-delay-[10ms] animate-ease-in animate-normal animate-fill-forwards">
           <img src={ProfilePicture} alt="profile" className="size-36 border-2 border-primary-950 dark:border-secondary-200 hover:border-blue-300 rounded-full" />
-          <div className="flex flex-col items-center md:items-start gap-3 text-primary-950 dark:text-secondary-200 w-full md:w-1/2">
-            <div className="flex flex-col items-center md:items-start gap-2">
+          <div className="flex flex-col items-center sm:items-start gap-3 p-4 text-primary-950 dark:text-secondary-200 w-full md:w-1/2">
+            <div className="flex flex-col items-center sm:items-start gap-2">
               <h1 className="text-3xl font-bold">besufikad micheal</h1>
               <span className="text-xl">full-stack developer</span>
             </div>
-            <p>Building high-performance applications with cutting-edge technologies.</p>
+            <p className="text-center sm:text-left">Building high-performance applications with cutting-edge technologies.</p>
           </div>
         </div>
       ) : section === "skills" ? (
         <div id="skills" className="flex flex-col items-center gap-8 text-primary-950 dark:text-secondary-200  animate-fade-left animate-once animate-duration-[200ms] animate-delay-[10ms] animate-ease-in animate-normal animate-fill-forwards">
           <h1 className="text-3xl">Skills</h1>
-          <span>Things I've picked up over the years</span>
-          <Skills/>
+          <div className="flex flex-col items-center gap-4">
+            <span>Things I've picked up over the years</span>
+            <Skills/>
+          </div>
         </div>
       ) : section === "experience" ? (
         <div className="flex flex-col gap-16 w-full md:w-1/2">

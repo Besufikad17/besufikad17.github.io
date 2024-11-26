@@ -40,68 +40,76 @@ export const LINKS = [
 
 export const RESUME_LINK = "https://drive.google.com/file/d/1QmP71EhC7Rc8wmGZrOt3XBFqGzY1GWSc/view?usp=sharing";
 
-export const SKILLS = [
-    {
-        name: "python",
-        icon: "simple-icons:python"
-    },
-    {
-        name: "java",
-        icon: "cib:java"
-    },
-    {
-        name: "javascript",
-        icon: "simple-icons:javascript"
-    },
-    {
-        name: "typescript",
-        icon: "simple-icons:typescript"
-    },
-    {
-        name: "golang",
-        icon: "simple-icons:go"
-    },
-    {
-        name: "dart",
-        icon: "simple-icons:dart"
-    },
-    {
-        name: "flutter",
-        icon: "simple-icons:flutter"
-    },
-    {
-        name: "react",
-        icon: "simple-icons:react"
-    },
-    {
-        name: "vue",
-        icon: "simple-icons:vuedotjs"
-    },
-    {
-        name: "nuxt",
-        icon: "simple-icons:nuxtdotjs"
-    },
-    {
-        name: "nodejs",
-        icon: "simple-icons:nodedotjs"
-    },
-    {
-        name: "prisma",
-        icon: "simple-icons:prisma"
-    },
-    {
-        name: "mysql",
-        icon: "simple-icons:mysql"
-    },
-    {
-        name: "mongodb",
-        icon: "simple-icons:mongodb"
-    },
-    {
-        name: "postgresql",
-        icon: "simple-icons:postgresql"
-    }
-];
+export const SKILLS = {
+    "frontend": [
+        {
+            name: "Nuxt.js",
+            icon: "simple-icons:nuxtdotjs"
+        },
+        {
+            name: "React",
+            icon: "simple-icons:react"
+        },
+        {
+            name: "Tailwind CSS",
+            icon: "simple-icons:tailwindcss"
+        },
+        {
+            name: "Typescript",
+            icon: "simple-icons:typescript"
+        },
+        {
+            name: "Vue",
+            icon: "simple-icons:vuedotjs"
+        },
+    ],
+    "backend": [
+        {
+            name: "Express.js",
+            icon: "simple-icons:express"
+        },
+        {
+            name: "Golang",
+            icon: "simple-icons:go"
+        },
+        {
+            name: "Laravel",
+            icon: "simple-icons:laravel"
+        },
+        {
+            name: "Nodejs",
+            icon: "simple-icons:nodedotjs"
+        },
+        {
+            name: "PHP",
+            icon: "simple-icons:php"
+        }
+    ],
+    "database": [
+        {
+            name: "MySQL",
+            icon: "simple-icons:mysql"
+        },
+        {
+            name: "MongoDB",
+            icon: "simple-icons:mongodb"
+        },
+        {
+            name: "PostgreSQL",
+            icon: "simple-icons:postgresql"
+        }
+    ],
+    "mobile": [
+        {
+            name: "Dart",
+            icon: "simple-icons:dart"
+        },
+        {
+            name: "Flutter",
+            icon: "simple-icons:flutter"
+        },
+    ]
+};
 
 export const SOCIAL_LINKS = [
     { 
