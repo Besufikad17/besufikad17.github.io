@@ -1,92 +1,71 @@
-// custom components
-import Skills from "./components/Skills";
-import Experience from "./components/Experience";
-import Projects from "./components/Projects";
+import { useEffect, useState } from "react";
 import ContactForm from "./components/ContactForm";
-import { useEffect } from "react";
-import { Helmet } from "react-helmet";
-
-// assets
-import pfp from "./assets/images/photo_2022-06-05_10-38-57.jpg";
+import DefaultLayout from "./components/layouts/Defualt";
+import Experience from "./components/Experience";
+import Skills from "./components/Skills";
+import ProfilePicture from "./assets/images/profile-picture.jpg";
+import Projects from "./components/Projects";
 import './App.css';
-import Footer from "./components/Footer";
 
 function App() {
+  const[section, setSection] = useState("about");
+  const [showToast, setShowToast] = useState(false);
+  const [toastMessage, setToastMessage] = useState("");
+  const [toastType, setToastType] = useState("");
   
   useEffect(() => {
-      document.title = 'Besufikad Micheal';
+    document.title = 'Besufikad Micheal';
   }, []);
 
   return (
-    <>
-      <div>
-          
-          <Helmet>
-            <script 
-              src="https://trantor.frectonz.tech/launch-control.js" 
-              data-id="trantor" 
-              data-tracking-id="01H2WBWDTT6PHXVEJRX5ANM8FQ">
-            </script>
-          </Helmet>
-
-          {/* Header */}
-          <div className="title-container">
-            <p className="name">
-                Besufikad Micheal
-            </p>
-            <p className="title">
-                Fullstack developer || Student
-            </p>
-          </div>
-
-          {/* Introduction */}
-          <div className="intro-container">
-            <div className="intro-row">
-                <img src={pfp} alt="profile" />
-                <div className="intro-card">
-                  <p>
-                      Hi there! I'm a fullstack developer and software engineering student based in Ethiopia.
-                      I started programming in high school and developed my skills through project based learning techniques.
-                      Currently I am working on open-source projects and avaliable for job.
-                  </p>
-                </div>
+    <DefaultLayout section={section} setSection={setSection} showToast={showToast} toastMessage={toastMessage} toastType={toastType} setShowToast={setShowToast} >    
+      { section === "about" ? (
+        <div className="flex flex-col items-center justify-center sm:flex-row sm:items-start gap-8 animate-fade-left animate-once animate-duration-[200ms] animate-delay-[10ms] animate-ease-in animate-normal animate-fill-forwards">
+          <img src={ProfilePicture} alt="profile" className="size-36 border-2 border-primary-950 dark:border-secondary-200 hover:border-blue-300 rounded-full" />
+          <div className="flex flex-col items-center sm:items-start gap-3 p-4 text-primary-950 dark:text-secondary-200 w-full md:w-1/2">
+            <div className="flex flex-col items-center sm:items-start gap-2">
+              <h1 className="text-3xl font-bold">besufikad micheal</h1>
+              <span className="text-xl">full-stack developer</span>
             </div>
+            <p className="text-center sm:text-left">Building high-performance applications with cutting-edge technologies.</p>
           </div>
-
-          {/* Skills */}
-          <div className="skills-container">
-            <p className="skill">Skills</p>
-            <p className="skill-title">Things I've picked up over the years</p>
+        </div>
+      ) : section === "skills" ? (
+        <div id="skills" className="flex flex-col items-center gap-8 text-primary-950 dark:text-secondary-200  animate-fade-left animate-once animate-duration-[200ms] animate-delay-[10ms] animate-ease-in animate-normal animate-fill-forwards">
+          <h1 className="text-3xl">Skills</h1>
+          <div className="flex flex-col items-center gap-4">
+            <span>Things I've picked up over the years</span>
             <Skills/>
           </div>
-
-          {/* Experience */}
-          <div className="experience-container">
-            <p className="xp">Experience</p>
-            <p className="xp-title">Places and people I've worked with</p>
+        </div>
+      ) : section === "experience" ? (
+        <div className="flex flex-col gap-16 w-full md:w-1/2">
+          <div id="experience" className="flex flex-col items-center gap-8 text-primary-950 dark:text-secondary-200  animate-fade-left animate-once animate-duration-[200ms] animate-delay-[10ms] animate-ease-in animate-normal animate-fill-forwards">
+            <h1 className="text-3xl">Experience</h1>
+            <span>Places and people I've worked with</span>
             <Experience/>
           </div>
-
-          {/* Projects */}
-          <div className="projects-container">
-            <p className="skill">Projects</p>
-            <p className="skill-title">List of open-source projects I have been working on</p>
+        </div>
+      ) : section === "projects" ? (
+        <div className="flex flex-col gap-16 w-full md:w-2/3">
+          <div id="experience" className="flex flex-col items-center gap-8 text-primary-950 dark:text-secondary-200  animate-fade-left animate-once animate-duration-[200ms] animate-delay-[10ms] animate-ease-in animate-normal animate-fill-forwards">
+            <h1 className="text-3xl">Projects</h1>
+            <span>List of projects I have been working on</span>
             <Projects/>
           </div>
-
-          {/* Contact */}
-          <div className="contact-container">
-            <p className="xp">Let's grab a cup!</p>
-            <p className="xp-title">Available to chat about design,
-                people, and things.</p>
-            <ContactForm/>
+        </div>
+      ) : section === "contact" ? (
+        <div className="flex flex-col gap-16 w-full sm:w-1/2">
+          <div id="experience" className="flex flex-col items-center gap-8 p-4 text-primary-950 dark:text-secondary-200  animate-fade-left animate-once animate-duration-[200ms] animate-delay-[10ms] animate-ease-in animate-normal animate-fill-forwards">
+            <h1 className="text-3xl">Let's grab a cup!</h1>
+            <span className="text-center">Available to chat about design, people, and things</span>
+            <ContactForm setShowToast={setShowToast} setToastMessage={setToastMessage} setToastType={setToastType} />
           </div>
-
-          {/* Footer */}
-          <Footer/>
-
-        </div>  
-    </>
+        </div>
+      ) : (
+        <div/>
+      )}
+    </DefaultLayout>
   )
 }
 
