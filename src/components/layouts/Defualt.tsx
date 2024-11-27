@@ -31,7 +31,7 @@ export default function DefaultLayout(props: LayoutProps) {
 
     return (
         <div className="flex flex-col bg-secondary-200 dark:bg-primary-950 w-full min-h-[calc(100vh-120px)] scroll-smooth">
-            <Toast message={props.toastMessage} type={props.toastType} show={props.showToast} />
+            <Toast message={props.toastMessage} type={props.toastType} show={props.showToast} setShowToast={props.setShowToast} />
             { drawerOpen && (
                 <Drawer ref={ref} autoClose={true} direction="right" isClosed={!drawerOpen} toggleDrawer={toggleDrawer} wrapperClassName="w-full sm:w-1/2 bg-secondary-200 dark:bg-primary-950">
                     <div className="flex flex-col gap-6 mt-10 p-8 text-primary-950 dark:text-secondary-200">

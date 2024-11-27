@@ -21,7 +21,6 @@ export async function sendEmail(data: ContactForm) {
       .then((response) => response.text())
       .then((result) => {
         console.log(result);
-        return result;
       })
       .catch((error) => {
         throw error;

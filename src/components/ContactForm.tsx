@@ -30,18 +30,24 @@ export default function ContactForm(props: ContactProps) {
       console.log(values);
       setLoading(true);
       try {
-        const response = await sendEmail({ email: values.email, subject: values.subject, message: values.message });
-        console.log(response);
-        setShowToast(true);
+        await sendEmail({ email: values.email, subject: values.subject, message: values.message });
         setToastType("success");
         setToastMessage("Email sent :)");
         setLoading(false);
+        setShowToast(true);
+        formik.resetForm();
+        setTimeout(() => {
+          setShowToast(false);
+        }, 3000);
       }catch(error) {
         console.log(error);
-        setShowToast(true);
         setToastType("error");
         setToastMessage("Error :(");
         setLoading(false);
+        setShowToast(true);
+        setTimeout(() => {
+          setShowToast(false);
+        }, 3000);
       }
     },
   });

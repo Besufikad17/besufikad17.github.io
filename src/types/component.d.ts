@@ -25,10 +25,12 @@ export type LayoutProps = {
     showToast: boolean;
     toastMessage: string;
     toastType: string;
+    setShowToast: (x: boolean) => void;
 }
 
 export type ToastProps = {
     message: string;
     show: boolean;
     type: string;
+    setShowToast: (x: boolean) => void;
 }
