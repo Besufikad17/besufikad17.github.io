@@ -1,8 +1,20 @@
 export const EXPERIENCE = [
     {
-        role: "Front-End Developer",
+        role: "Back-End Developer",
+        company: "HopeUp Tech Inc",
+        duration: "November 2024 - May 2025",
+        description: [
+            "Developed and maintained scalable backend services using NestJS, adhering to system design specifications.",
+            "Designed and implemented relational database schemas with PostgreSQL, utilizing Prisma ORM for efficient data handling.",
+            "Built and managed microservices architecture, integrating TCP and Apache Kafka as message brokers for inter-service communication. ",
+            "Engineered WebSocket-based real-time communication features to support dynamic client interactions.",
+            "Deployed and managed backend services on AWS, ensuring scalability, availability, and performance."
+        ]
+    },
+    {
+        role: "Fullstack Developer",
         company: "Minab IT Solutions PLC",
-        duration: "Jul 2024 - Present",
+        duration: "Jul 2024 - November 2024",
         description: [
             "Developed a responsive and robust web application using Nuxt.js, translating complex UI designs into fully functional components.",
             "Integrated dynamic location pickers and map functionalities utilizing Leaflet for enhanced user interaction.",
@@ -110,6 +122,10 @@ export const SKILLS = {
             icon: "simple-icons:express"
         },
         {
+            name: "NestJs",
+            icon: "simple-icons:nestjs"
+        },
+        {
             name: "Go",
             icon: "simple-icons:go"
         },
@@ -157,7 +173,7 @@ export const SKILLS = {
 };
 
 export const SOCIAL_LINKS = [
-    { 
+    {
         icon: "simple-icons:x",
         url: "https://twitter.com/besumicheal"
     }, {
