@@ -1,6 +1,18 @@
 export const EXPERIENCE = [
     {
-        role: "Back-End Developer",
+        role: "Fullstack Developer",
+        company: "Alet Systems",
+        duration: "June 2025 - Present",
+        description: [
+            "Enhanced withdrawal management features, supporting backend using Go and dashboard using Next.js  functionalities.",
+            "Implemented two-factor authentication (2FA) and security key support, boosting platform security.",
+            "Developed event management modules, streamlining status updates and bug fixes. ",
+            "Integrated SMS notifications for withdrawals, improving user experience with real-time updates.",
+            "Upgraded KYC flows for merchants, ensuring compliance and facilitating onboarding."
+        ]
+    },
+    {
+        role: "Backend Developer",
         company: "HopeUp Tech Inc",
         duration: "November 2024 - May 2025",
         description: [
@@ -23,7 +35,7 @@ export const EXPERIENCE = [
         ]
     },
     {
-        role: "Back-End Developer",
+        role: "Backend Developer",
         company: "Micro Sun & Solutions PLC",
         duration: "Feb 2024 - Jul 2024",
         description: [
