@@ -1,8 +1,19 @@
 export const EXPERIENCE = [
     {
+        role: "Backend Developer",
+        company: "E-LMIS",
+        duration: "November 2025 - Present",
+        description: [
+            "Designed and enforced role-based access control (RBAC) using Hasura Row-Level Security (RLS), replacing manual permission logic.",
+            "Led development of a secure authentication system by using Nest.js to create custom actions.",
+            "Implemented refresh token rotation, scoped tokens, and rate limiting/cooldown mechanisms to strengthen API security and prevent abuse.",
+            "Created and maintained extensive PostgreSQL migrations, triggers, enums, and seed data, ensuring data integrity and clean schema evolution.", "Refactored permission structures and database constraints to improve scalability, consistency, and maintainability."
+        ],
+    },
+    {
         role: "Fullstack Developer",
         company: "Alet Systems",
-        duration: "June 2025 - Present",
+        duration: "June 2025 - November 2025",
         description: [
             "Enhanced withdrawal management features, supporting backend using Go and dashboard using Next.js  functionalities.",
             "Implemented two-factor authentication (2FA) and security key support, boosting platform security.",
@@ -103,7 +114,7 @@ export const PROJECTS = [
     },
 ];
 
-export const RESUME_LINK = "https://docs.google.com/document/d/1I_nynqTNUIJGH4kY-9Vt7RgY9xEV6zvSUKNtmljzIx0/edit?usp=sharing";
+export const RESUME_LINK = "https://drive.google.com/file/d/1X_Y69KrvRGLwMwr59Xv9yS2s421GhjQU/view?usp=sharing";
 
 export const SKILLS = {
     "frontend": [
