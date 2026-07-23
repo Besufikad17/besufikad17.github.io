@@ -114,7 +114,7 @@ export const PROJECTS = [
     },
 ];
 
-export const RESUME_LINK = "https://drive.google.com/file/d/1X_Y69KrvRGLwMwr59Xv9yS2s421GhjQU/view?usp=sharing";
+export const RESUME_LINK = "https://drive.google.com/file/d/1ljX6VCI_JxfaJOei4CgkRtbnPuYi_AYJ/view?usp=sharing";
 
 export const SKILLS = {
     "frontend": [
